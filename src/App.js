@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import AuthOutlet from '@auth-kit/react-router/AuthOutlet';
+import { Route, Routes } from 'react-router-dom';
+import useSignIn from 'react-auth-kit/hooks/useSignIn';
+import Login from './components/Login';
+const Users = ()=>{
+  return <>Users</>
 }
 
-export default App;
+const Products = ()=>{
+  return <>Products</>
+}
+
+
+export default function App() {
+ 
+ return (
+   
+     <Routes>
+       <Route element={<AuthOutlet fallbackPath='/login' />}>
+         <Route path='/' element={<Users/>} />
+         <Route path='/products' element={<Products/>} />
+       </Route>
+       <Route path='/login' element={<Login/>}/>
+     </Routes>
+   
+ );
+}
