@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/auth-frontend/static/css/main.ba30c083.css",
-    "main.js": "/auth-frontend/static/js/main.41123197.js",
-    "static/media/doctor.png": "/auth-frontend/static/media/doctor.cd0e2816b2e9e57d4c39.png",
-    "index.html": "/auth-frontend/index.html",
-    "main.ba30c083.css.map": "/auth-frontend/static/css/main.ba30c083.css.map",
-    "main.41123197.js.map": "/auth-frontend/static/js/main.41123197.js.map"
+    "main.css": "/auth-frontend%20/static/css/main.ba30c083.css",
+    "main.js": "/auth-frontend%20/static/js/main.2789c6f8.js",
+    "static/media/doctor.png": "/auth-frontend%20/static/media/doctor.cd0e2816b2e9e57d4c39.png",
+    "index.html": "/auth-frontend%20/index.html",
+    "main.ba30c083.css.map": "/auth-frontend%20/static/css/main.ba30c083.css.map",
+    "main.2789c6f8.js.map": "/auth-frontend%20/static/js/main.2789c6f8.js.map"
   },
   "entrypoints": [
     "static/css/main.ba30c083.css",
-    "static/js/main.41123197.js"
+    "static/js/main.2789c6f8.js"
   ]
 }
