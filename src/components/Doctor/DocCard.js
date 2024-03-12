@@ -24,7 +24,7 @@ const DocCard = (props)=>{
       <div style={{display: 'flex', justifyContent: 'center'}}>
         {!docName?notfound?<>not doctor found with name: {params.name}</>:<>loading</>:
         <>
-      <img src={doctor} width={'300vw'} height={'auto'} style={{borderRadius: '1rem 0 0 1rem'}}></img>
+      <img src={"https://media.istockphoto.com/id/177373093/photo/indian-male-doctor.jpg?s=612x612&w=0&k=20&c=5FkfKdCYERkAg65cQtdqeO_D0JMv6vrEdPw3mX1Lkfg="} width={'300vw'} height={'auto'} style={{borderRadius: '1rem 0 0 1rem'}}></img>
       <div style={{width: 'fit-content', backgroundColor: 'gray', padding: '4rem', borderRadius: '0 1rem 1rem 0'}} >
         doctor name: {docName}
       </div>

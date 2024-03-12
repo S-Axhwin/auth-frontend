@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "../auth/Axios";
 import NewDoc from './NewDoc'
 import HeroDoc from './HeroDoc'
+import Skeleton from "./Skeleton"
 const ListDoc = ()=>{
     const [arr, setArr] = useState("");
     useEffect(()=>{
@@ -20,12 +21,13 @@ const ListDoc = ()=>{
         {arr?arr.map(item=>{
           //console.log(item.username);
           return (
+
           <div key={item.username} >
             <Link to={`/doctors/${item.username}`} style={{margin: '0rem', textDecoration: 'none'}}>
               <NewDoc name={item.username}></NewDoc>
             </Link>
           </div>)
-        }):null}
+        }):<Skeleton></Skeleton>}
       </div>
       </>
     )

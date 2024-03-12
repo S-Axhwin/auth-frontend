@@ -18,7 +18,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
   <AuthProvider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename='auth-frontend'>
         <App />
     </BrowserRouter>
   </AuthProvider>

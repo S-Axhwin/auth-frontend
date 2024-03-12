@@ -1,19 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 import useSignIn from 'react-auth-kit/hooks/useSignIn';
 import { useFormik } from "formik";
 import axios from '../auth/Axios';
 import { useNavigate } from 'react-router-dom';
 import Form from './Form';
 
-const Login = () => {
+const Login = (props) => {
   const signIn = useSignIn();
   const Navi = useNavigate();
-  const [isDoc, setDoc] = useState(false);
+  
   const onSubmit = async (values) => {
     
     //setError("");
     try {
-      const response = await axios.post(`api/login/${isDoc?"doc":"user"}`,
+      const response = await axios.post(`api/login/${props.isDoc?"doc":"user"}`,
         values
       );
       console.log(response.data.token);
@@ -24,7 +24,13 @@ const Login = () => {
         }
       })
       localStorage.setItem("token", response.data.token)
-      Navi("/doctors");
+      localStorage.setItem("isDoc", response.data.isDoc)
+      if(props.isDoc){
+        Navi("/test")
+      }else{
+
+        Navi("/doctors");
+      }
     } catch (err) {
       console.log("Error: ", err);
     }
@@ -39,7 +45,7 @@ const Login = () => {
   });
 
   return (
-    <Form formik={formik} setDoc={setDoc} isDoc={isDoc} ></Form>
+    <Form formik={formik} setDoc={props.setDoc} isDoc={props.isDoc} ></Form>
   )
 }
 

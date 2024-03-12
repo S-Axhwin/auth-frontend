@@ -22,7 +22,7 @@ function MainFeaturedPost(props) {
       }}
     >
       {/* Increase the priority of the hero background image */}
-      {<img style={{  }} src={"https://as1.ftcdn.net/v2/jpg/02/16/47/22/1000_F_216472247_cT66WDoS0fp1s3wC7eaykMJNDGVbOBPq.jpg"} width={'100%'} alt={'image'} />}
+      {<img style={{  }} src={"https://previews.123rf.com/images/chagin/chagin1809/chagin180900056/107646904-young-handsome-doctor-on-modern-clinic-background-horizontal-image-for-website-design.jpg"} width={'100%'} alt={'image'} />}
       <Box
         sx={{
           position: 'absolute',

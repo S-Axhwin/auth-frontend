@@ -2,6 +2,10 @@
   "name": "clientv1",
   "version": "0.1.0",
   "private": true,
+  "proxy": {
+    "*":{ "target" : "https://server-production-fa75.up.railway.app/"}
+ } ,
+  "homepage": "https://s-axhwin.github.io/auth-frontend",
   "dependencies": {
     "@auth-kit/react-router": "^3.1.2",
     "@emotion/react": "^11.11.4",
@@ -15,8 +19,10 @@
     "axios": "^1.6.7",
     "bootstrap": "^5.3.3",
     "formik": "^2.4.5",
+    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-auth-kit": "^3.1.2",
+    "react-big-calendar": "^1.11.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.2",
     "react-scripts": "5.0.1",
@@ -26,7 +32,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [

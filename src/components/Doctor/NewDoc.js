@@ -79,7 +79,7 @@ function FeaturedPost(props) {
     </Box>
             </Typography>
             <Typography variant="subtitle1" paragraph>
-              <Link to={`/doctors/appointment/${params.name}`} >
+              <Link to={`/doctors/appointment/${params.name || props.name}`} >
               <Button >Book Appointment</Button>
               </Link>
             </Typography>
@@ -87,7 +87,7 @@ function FeaturedPost(props) {
           <CardMedia
           component="img"
           sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
-          image={doc}
+          image={"https://media.istockphoto.com/id/177373093/photo/indian-male-doctor.jpg?s=612x612&w=0&k=20&c=5FkfKdCYERkAg65cQtdqeO_D0JMv6vrEdPw3mX1Lkfg="}
           alt={post?.imageLabel}
           />
         </Card>
